@@ -3,9 +3,9 @@
 @section('contents')
 
 <a href="{{route('admin.employee.form')}}" class="btn btn-primary">Add Employee</a>
-
+<caption>List of Emplpyees</caption>
 <table class="table">
-  <caption>List of users</caption>
+  
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -14,6 +14,7 @@
       <th scope="col">Phone_number</th>
       <th scope="col">Designation</th>
       <th scope="col">Salery</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,10 @@
       <td>{{$employee->phone_number}}</td>
       <td>{{$employee->designation}}</td>
       <td>{{$employee->salery}}</td>
+      <td>
+      <a href="" class="btn btn-info">Edit</a>
+      <a href="{{route('admin.employee.delete',$employee->id)}}" class="btn btn-danger">Delete</a>
+     </td>
     </tr>
     @endforeach
   </tbody>

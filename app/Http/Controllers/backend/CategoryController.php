@@ -30,7 +30,16 @@ class CategoryController extends Controller
             'name'=>$request->name,
             'details'=>$request->details
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.category.list');
+
+    }
+    public function deleteCategory($id){
+        $category = Category::find($id);
+
+        if ($category) {
+           $category->delete();
+           return redirect()->back();
+        }
 
     }
 }

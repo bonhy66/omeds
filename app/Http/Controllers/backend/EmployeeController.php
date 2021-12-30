@@ -30,6 +30,15 @@ class EmployeeController extends Controller
             'designation'=>$request->designation,
             'salery'=>$request->salery
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.employee.list');
      }
+
+     public function deleteEmployee($id){
+        $employee = Employee::find($id);
+
+        if ($employee){
+            $employee->delete();
+            return redirect()->back();
+        }
+    }
 }

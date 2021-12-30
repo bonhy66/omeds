@@ -12,6 +12,7 @@
       <th scope="col">Email</th>
       <th scope="col">Address</th>
       <th scope="col">Phone_number</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,13 @@
       <td>{{$company->email}}</td>
       <td>{{$company->address}}</td>
       <td>{{$company->phone_number}}</td>
+      <td>
+        <a href="" class="btn btn-info">Edit</a>
+        <a href="{{route('admin.employee.delete',$company->id)}}" class="btn btn-danger">Delete</a>
+
+        
+
+      </td>
 
     </tr>
     @endforeach

@@ -49,13 +49,12 @@
             <div class="col-lg-12 text-center">
                 <div class="footer__copyright__text">
 
-                    <p>Copyright ©
+                    <p>===
                         <script>
                             document.write(new Date().getFullYear());
 
-                        </script>2020
-                        All rights reserved | This template is made with <i class="fa fa-heart-o"
-                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </script>
+                        The End </i>===</a>
                     </p>
 
                 </div>

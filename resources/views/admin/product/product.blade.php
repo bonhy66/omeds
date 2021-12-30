@@ -3,18 +3,30 @@
 @section('contents')
 
 <a href="{{route('admin.product.add')}}" class="btn btn-primary">Add Product</a>
+<form action="{{route('admin.product.search')}}" method="get">
+
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <input type="text" class="from-control" name="Search" placeholder="search here....">
+      <button class="btn btn-primary" type="submit">Search</button>
+     </div>
+  </div>
+</form>
 
 <table class="table">
-  <caption>List of users</caption>
+  
   <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Image</th>
-      <th scope="col">name</th>
+      <th scope="col">Name</th>
       <th scope="col">Category</th>
       <th scope="col">Company</th>
       <th scope="col">Quantity</th>
       <th scope="col">Price</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +41,13 @@
       <td>{{$product->company->name}}</td>
       <td>{{$product->quentity}}</td>
       <td>{{$product->price}}</td>
+      <td>
+        <a href ="{{route('admin.product.view',$product->id)}}" class="btn btn-info">View</a>
+        <a href ="{{route('admin.product.edit',$product->id)}}" class="btn btn-info">Edit</a>
+        <a href="{{route('admin.product.delete',$product->id)}}" class="btn btn-danger">Delete</a>
+
+
+      </td>
     </tr>
     @endforeach
   </tbody>

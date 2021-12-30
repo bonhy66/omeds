@@ -32,4 +32,15 @@ class CompanyController extends Controller
         return redirect()->back();
         
     }
+    public function deleteCompany($id){
+        $company = Company::find($id);
+
+        if ($company){
+            $company->delete();
+            return redirect()->back();
+        }
+
+
+    }
+    
 }

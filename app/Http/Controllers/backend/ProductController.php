@@ -15,6 +15,23 @@ class ProductController extends Controller
         $products = Product::with('category','company')->get();
         // dd($products);
         return view('admin.product.product',compact('products'));
+    
+    
+    }
+
+    public function productSearch(){
+        // dd(request()->all());
+        $key=null;
+        if(request()->Search){
+            $key=request()->Search;
+            $products = Product::with('category')
+                ->where('name','LIKE','%'.$key.'%')
+                ->get();
+            return view('admin.product.product',compact('products','key'));
+        }
+       
+        $products = Product::with('category')->get();
+        return view('admin.product.product',compact('products','key'));
     }
 
     public function form(){
@@ -23,6 +40,7 @@ class ProductController extends Controller
         $companies = Company::all();
         //dd($companies);
         return view('admin.product.product-add',compact('categories','companies'));
+        
 
     }
 
@@ -41,12 +59,60 @@ class ProductController extends Controller
             'image'=>$filename,
             'name'=>$request->name,
             'category_id'=>$request->category,
-            'company_id'=>$request->comapny,
+            'company_id'=>$request->company,
             'quentity'=>$request->quentity, 
             'price'=>$request->price
         ]);
-        return redirect()->back();
+        
+        return redirect()->route('admin.product.list');
+        
      }
+    
+    
+    public function viewProduct($id){
+       $product = Product::find($id);
+       return view('admin.product.product_view', compact('product'));
+   }
+   
+
+    public function editProduct($id){
+        $product = Product::find($id);
+        $categories = Category::all();
+        $companies = Company::all();
+        return view('admin.product.product_update', compact('product','categories','companies'));
+        
+
+    
+    }
+    public function updateProduct(Request $request,$id){
+        $product = Product::find($id);
+        if ($product) {
+            $product->update([
+            'name'=>$request->name,
+            'category_id'=>$request->category,
+            'company_id'=>$request->company,
+            'quentity'=>$request->quentity, 
+            'price'=>$request->price
+
+            ]);
+            return redirect()->route('admin.product.list')->with('success','Product Updated Successfully.');
+        }
+       
+     
+    }
+
+
+
+   public function deleteProduct($id){
+        $product = Product::find($id);
+
+        if ($product)
+         {
+          $product->delete();
+          return redirect()->back();
+         }  
+
+    }
 
 
 }

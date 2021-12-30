@@ -9,6 +9,8 @@
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Details</th>
+      <th scope="col">Action</th>
+
       
     </tr>
   </thead>
@@ -18,6 +20,11 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$category->name}}</td>
       <td>{{$category->details}}</td>
+      <td>
+        <a href="" class="btn btn-info">Edit</a>
+        <a href="{{route('admin.category.delete',$category->id)}}" class="btn btn-danger">Delete</a>
+
+      </td>
       
     </tr>
     @endforeach 
