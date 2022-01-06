@@ -7,7 +7,7 @@
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationDefault01">Company Name</label>
-      <input name="name" type="text" class="form-control" id="validationDefault01" placeholder="Companyname" >
+      <input name="name" type="text" class="form-control" id="validationDefault01" placeholder="Company name" >
     </div>
     
 

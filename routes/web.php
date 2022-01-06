@@ -12,6 +12,7 @@ use App\Http\Controllers\backend\RequisitionController;
 // use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 use App\Http\Controllers\Frontend\UserController as FrontendUser;
+use App\Http\Controllers\Frontend\FrontendController;
 
 
 /*
@@ -24,26 +25,50 @@ use App\Http\Controllers\Frontend\UserController as FrontendUser;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//Route::get('/',[FrontendUser::class,'frontend'])->name('master');
+
+
+//Route::get('/',function(){
+//  return view('frontend.index');
+//});
+
+
 //frontend
 // Route::get('/frontend/master',[FrontendUser::class,'frontMaster'])->name('frontend.master');
-Route::get('/frontend/index',[FrontendUser::class,'index'])->name('frontend.index');
+Route::group(['prefix'=>'frontend'],function(){ 
+
+Route::get('/index',[FrontendUser::class,'index'])->name('frontend.index');
+
+Route::get('/login',[FrontendUser::class,'userlogin'])->name('user.login');
+Route::post('/login/post',[FrontendUser::class,'dologin'])->name('user.dologin');
+Route::get('/logout',[FrontendUser::class,'userlogout'])->name('user.logout');
+
+Route::get('/registration',[FrontendUser::class,'registration'])->name('user.registration');
+Route::post('/registration',[FrontendUser::class,'doregistration'])->name('user.doRegistration');
+Route::get('/view/{id}',[FrontendController::class,'viewSingleProduct'])->name('user.singleProduct.view');
 
 
 
+});
 
 //backend
 
 //admin login
 
-Route::get('/login',[UserController::class,'login'])->name('admin.login');
+
+
+Route::get('admin/login',[UserController::class,'login'])->name('admin.login');
 Route::post('/login',[UserController::class,'doLogin'])->name('admin.doLogin');
 
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){ 
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){ 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/logout',[UserController::class,'Adminlogout'])->name('admin.logout');
 
 Route::get('/master',[AdminController::class,'master'])->name('master');
 Route::get('/index',[AdminController::class,'index'])->name('admin.index');
@@ -58,12 +83,9 @@ Route::get('/category/delete/{id}',[CategoryController::class,'deleteCategory'])
 Route::get('/product/list',[ProductController::class,'list'])->name('admin.product.list');
 Route::get('/product/add',[ProductController::class,'form'])->name('admin.product.add');
 Route::post('/product/post',[ProductController::class,'postProduct'])->name('admin.product.post');
-
 Route::get('/product/view/{id}',[ProductController::class,'viewProduct'])->name('admin.product.view');
-
 Route::get('/product/edit/{id}',[ProductController::class,'editProduct'])->name('admin.product.edit');
 Route::put('/product/update/{id}',[ProductController::class,'updateProduct'])->name('admin.product.update');
-
 Route::get('/product/delete/{id}',[ProductController::class,'deleteProduct'])->name('admin.product.delete');
 Route::get('/product/search',[ProductController::class,'productSearch'])->name('admin.product.search');
 
@@ -84,6 +106,8 @@ Route::get('/order/list',[OrderController::class,'list'])->name('admin.order.lis
 Route::get('/order/add',[OrderController::class,'form'])->name('admin.order.add');
 Route::post('/order/post',[OrderController::class,'postOrder'])->name('admin.order.post');
 Route::get('/order/delete/{id}',[OrderController::class,'deleteOrder'])->name('admin.order.delete');
+
+
 
 
 Route::get('/requisition/list',[RequisitionController::class,'form'])->name('admin.requisition.form');

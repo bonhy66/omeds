@@ -7,7 +7,7 @@
 <meta name="keywords" content="Male_Fashion, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Male-Fashion | Template</title>
+<title>Frontend Medical Equipment </title>
 
 
 <link rel="stylesheet" href="{{url('frontend/css/style.css')}}">

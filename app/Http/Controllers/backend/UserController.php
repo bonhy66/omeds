@@ -14,11 +14,10 @@ class UserController extends Controller
     }
 
     public function login()
- {
-    return view('admin.login');
+    {
+        return view('admin.login');
 
-
- }
+    }
     public function doLogin(Request $request)
     {
         // dd($request->all());

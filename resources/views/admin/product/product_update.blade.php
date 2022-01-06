@@ -18,7 +18,7 @@
            <select name="category" class="form-control" id="exampleInputPassword1">
                 <option>select one</option>
                 @foreach($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    <option @if($product->category_id == $category->id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
 
             </select>
@@ -29,7 +29,7 @@
             <select name="company" class="form-control" id="exampleInputPassword2">   
                 <option>select one</option>
                 @foreach($companies as $company)
-                  <option value="{{$company->id}}">{{$company->name}}</option>
+                  <option @if($product->company_id == $company->id) selected @endif value="{{$company->id}}">{{$company->name}}</option>
                 @endforeach
             </select>
     

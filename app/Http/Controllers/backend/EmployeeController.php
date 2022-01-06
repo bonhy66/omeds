@@ -25,8 +25,13 @@ class EmployeeController extends Controller
         Employee::create([
             //field name from DB || field name from form 
             'name'=>$request->name,
+            'nid'=>$request->nid,
+            'birth_date'=>$request->birth_date,
+            'blood_group'=>$request->blood_group,
             'address'=>$request->address,
             'phone_number'=>$request->phone,
+            'joining_date'=>$request->joining_date,
+            'department'=>$request->department,
             'designation'=>$request->designation,
             'salery'=>$request->salery
         ]);
@@ -41,4 +46,5 @@ class EmployeeController extends Controller
             return redirect()->back();
         }
     }
+
 }

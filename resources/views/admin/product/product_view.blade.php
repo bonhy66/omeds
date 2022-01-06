@@ -1,23 +1,54 @@
 @extends('admin.master')
 @section('contents')
+<input style="float: right !important;" class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');"
+    value="Print">
+<h1>Product Details</h1>
 <div id="divToPrint">
-    <h1>Product Details</h1>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Product Image:</label>
+
+            <p><img width="200px" src="{{url('/uploads/product/'.$product->image)}}" alt="product image"></p>
+
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Product Name:</label>
+            <input value="{{$product->name}}" type="text" class="form-control" id="exampleInputPassword1" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Product Category:</label>
+            <input value="{{($product->category)->name}}"type="text" class="form-control" id="exampleInputPassword2" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Company:</label>
+            <input value="{{($product->company)->name}}"type="text" class="form-control" id="exampleInputPassword2" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Product Quantity:</label>
+            <input value="{{$product->quentity}}"type="text" class="form-control" id="exampleInputPassword2" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Product Price:</label>
+            <input value="{{$product->price}}"type="text" class="form-control" id="exampleInputPassword2" readonly>
+        </div>
+       
+       
+    </form>
+
     <div class="container">
-        <p>Product Image:<img width="200px" src="{{url('/uploads/product/'.$product->image)}}" alt="product image"></p>
-        <p>Product Name: {{$product->name}}</p>
-        <p>Product Category: {{($product->category)->name}}</p>
-        <p>Company: {{($product->company)->name}}</p>
-        <p>Product Quantity: {{$product->quentity}}</p>
-        <p>Product Price: {{$product->price}}</p>
+        
     </div>
 </div>
-    <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 
-@endsection
+
 
 <script language="javascript">
-    function PrintDiv(divName) 
-    {
+    function PrintDiv(divName) {
         var printContents = document.getElementById(divName).innerHTML;
         var originalContents = document.body.innerHTML;
         document.body.innerHTML = printContents;
@@ -26,3 +57,4 @@
     }
 
 </script>
+@endsection

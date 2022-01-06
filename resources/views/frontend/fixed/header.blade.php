@@ -8,7 +8,12 @@
                 <div class="col-lg-6 col-md-5">
                     <div class="header__top__right">
                         <div class="header__top__links">
-                            <a href="#">Sign in</a>
+                            @if((auth()->user()))
+                            <a href="">{{auth()->user()->name}}</a>
+                            <a href="{{route('user.logout')}}">Logout</a>
+                            @else
+                            <a href="{{route('user.login')}}">Log in</a>
+                            @endif
                         </div>
                         
                     </div>
@@ -16,26 +21,27 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
+   <div class="container">
+       </div>
+       <!-- <div class="row">
             <div class="col-lg-3 col-md-3">
                 <div class="header__logo">
                     <a href=""><img
                             src="" alt=""></a>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+           <div class="col-lg-6 col-md-6">
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
                         <li><a href="./shop.html">Shop</a></li>
                         <li><a href="#">Pages</a>
-                            <ul class="dropdown">
+                           <ul class="dropdown">
                                 <li><a href="./about.html">About Us</a></li>
                                 <li><a href="./shop-details.html">Shop Details</a></li>
                                 <li><a href="./shopping-cart.html">Shopping Cart</a></li>
                                 <li><a href="./checkout.html">Check Out</a></li>
-                                <!--<li><a href="./blog-details.html">Blog Details</a></li>-->
+                                <li><a href="./blog-details.html">Blog Details</a></li>
                             </ul>
                         </li>
                         <li><a href="./blog.html">Blog</a></li>
@@ -59,5 +65,5 @@
             </div>
         </div>
         <div class="canvas__open"><i class="fa fa-bars"></i></div>
-    </div>
+    </div>-->
 </header>
