@@ -39,7 +39,7 @@
       <td>{{$product->name}}</td>
       <td>{{$product->category->name}}</td>
       <td>{{optional($product->company)->name}}</td>
-      <td>{{$product->quentity}}</td>
+      <td>{{$product->quantity}}</td>
       <td>{{$product->price}}</td>
       <td>
         <a href ="{{route('admin.product.view',$product->id)}}" class="btn btn-info">View</a>

@@ -10,7 +10,8 @@
                         <span class="label">New</span>
                         <ul  class="product__hover" style="position: static">
                             
-                            <li><a href="{{route('user.singleProduct.view',$product->id)}}"><img src="{{url('/uploads/product/'.$product->image)}}" alt="">
+                            <li><a href="{{route('user.singleProduct.view',$product->id)}}">
+                                <img src="{{url('/uploads/product/'.$product->image)}}" alt="">
                                     <span>Compare</span></a></li>
                         </ul>
                     </div>
@@ -18,7 +19,7 @@
                         <h5>{{$product->name}}</h5>
                        
                         <h5>Price {{$product->price}}</h5>
-                        <h5>Quentity {{$product->quentity}}</h5>
+                        <h5>Quantity {{$product->quantity}}</h5>
                         
                     </div>
                 </div>

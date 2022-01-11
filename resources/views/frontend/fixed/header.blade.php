@@ -23,7 +23,7 @@
     </div>
    <div class="container">
        </div>
-       <!-- <div class="row">
+       <div class="row">
             <div class="col-lg-3 col-md-3">
                 <div class="header__logo">
                     <a href=""><img
@@ -42,14 +42,16 @@
                                 <li><a href="./shopping-cart.html">Shopping Cart</a></li>
                                 <li><a href="./checkout.html">Check Out</a></li>
                                 <li><a href="./blog-details.html">Blog Details</a></li>
+                                <li><a href="./blog-details.html">Blog Details</a></li>
                             </ul>
                         </li>
                         <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contacts</a></li>
+                        <li><a href="{{route('viewcart')}}">My Cart <span style="color:red">{{session('cart')? count(session('cart')) : 0}}</span></a></li>
+                       
                     </ul>
                 </nav>
             </div>
-            <div class="col-lg-3 col-md-3">
+          <!--   <div class="col-lg-3 col-md-3">
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img
                             src="data:image/webp;base64,UklGRtQAAABXRUJQVlA4TMgAAAAvDwAEEF8CEIT/bhERDNu2cRw8yb77XtIAFbAAEk6x+0l1EPCaAq/AErsSoNgpSlGHKkBA6YNJUJGSIACHkWSb1jx/6+Hbtm0r/4ieUojo/wQAWn5+uaxKYZyT+9egkG/fr5ZD/DmJAAS6Xx2QtwsJ585Zg/Qvhqt6KkBvhsfWDNZNL7kDrBteskfoj73UppD+RN2UYwGUzUh0qV81IPEcBm1K9W9iTx1vrUy6sru9W4INrbC8PtblkPFuCTaPxrvqA+Nd8oFeBA=="

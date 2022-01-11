@@ -48,8 +48,8 @@
 
 
         <div class="col-md-3 mb-3">
-            <label for="validationCustom04">Quentity</label>
-            <input name="quentity" type="text" class="form-control" id="validationCustom04" placeholder="Quentity">
+            <label for="validationCustom04">Quantity</label>
+            <input name="quantity" type="text" class="form-control" id="validationCustom04" placeholder="Quantity">
         </div>
 
         <div class="col-md-3 mb-3">

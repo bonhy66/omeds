@@ -36,8 +36,8 @@
     </div>
 
     <div class="form-group">
-        <label for="exampleInputPassword1">Quentity</label>
-        <input value="{{$product->quentity}}" name="quentity" type="text" class="form-control" id="exampleInputPassword3" placeholder="Quentity">
+        <label for="exampleInputPassword1">Quantity</label>
+        <input value="{{$product->quantity}}" name="quantity" type="text" class="form-control" id="exampleInputPassword3" placeholder="Quantity">
     </div>
 
     <div class="form-group">

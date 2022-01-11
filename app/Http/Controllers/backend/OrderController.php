@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Product;
 
 
 class OrderController extends Controller
@@ -44,9 +45,16 @@ class OrderController extends Controller
     public function deleteOrder($id){
         $order = Order::find($id);
  
-       if ($order) {
-       $order->delete();
-       return redirect()->route('admin.order.list');
+       if ($order)
+        {
+            $order->delete();
+            return redirect()->route('admin.order.list');
+        }
     }
+
+
+   
+
+
 }
-}
+    

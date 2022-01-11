@@ -44,6 +44,7 @@ class UserController extends Controller
     public function userlogout()
     {
         //dd("ok");
+        session()->forget('cart');
         Auth::logout();
         return redirect()->route('frontend.index')->with('message','Logging out.');
     }

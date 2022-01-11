@@ -60,7 +60,7 @@ class ProductController extends Controller
             'name'=>$request->name,
             'category_id'=>$request->category,
             'company_id'=>$request->company,
-            'quentity'=>$request->quentity, 
+            'quantity'=>$request->quantity, 
             'price'=>$request->price
         ]);
         
@@ -91,7 +91,7 @@ class ProductController extends Controller
             'name'=>$request->name,
             'category_id'=>$request->category,
             'company_id'=>$request->company,
-            'quentity'=>$request->quentity, 
+            'quantity'=>$request->quantity, 
             'price'=>$request->price
 
             ]);

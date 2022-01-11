@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label for="exampleInputPassword1">Product Quantity:</label>
-            <input value="{{$product->quentity}}"type="text" class="form-control" id="exampleInputPassword2" readonly>
+            <input value="{{$product->quantity}}"type="text" class="form-control" id="exampleInputPassword2" readonly>
         </div>
 
         <div class="form-group">

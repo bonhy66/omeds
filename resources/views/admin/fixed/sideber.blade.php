@@ -147,7 +147,7 @@
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-6" aria-controls="submenu-6">
 
-                            <i class="fas fa-credit-front"></i>Payment</a>
+                            <i class="fas fa-money-check-alt"></i>Payment</a>
 
                         <div id="submenu-6" class="collapse submenu" style="">
                             <ul class="nav flex-column">

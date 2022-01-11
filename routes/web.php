@@ -13,6 +13,7 @@ use App\Http\Controllers\backend\RequisitionController;
 
 use App\Http\Controllers\Frontend\UserController as FrontendUser;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\CartController;
 
 
 /*
@@ -36,6 +37,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 
 //frontend
 // Route::get('/frontend/master',[FrontendUser::class,'frontMaster'])->name('frontend.master');
+
 Route::group(['prefix'=>'frontend'],function(){ 
 
 Route::get('/index',[FrontendUser::class,'index'])->name('frontend.index');
@@ -48,6 +50,15 @@ Route::get('/registration',[FrontendUser::class,'registration'])->name('user.reg
 Route::post('/registration',[FrontendUser::class,'doregistration'])->name('user.doRegistration');
 Route::get('/view/{id}',[FrontendController::class,'viewSingleProduct'])->name('user.singleProduct.view');
 
+Route::get('/add_to_cart/{id}',[CartController::class,'addtocart'])->name('addtocart');
+Route::get('/cartview',[CartController::class,'viewcart'])->name('viewcart');
+
+//Route::group(['middleware'=>'web_auth'],function (){
+//Route::get('/add-to-cart/{id}',[OrderController::class,'addToCart'])->name('cart.add');
+//Route::get('/get-cart',[OrderController::class,'getCart'])->name('cart.get');
+//Route::get('/clear-cart',[OrderController::class,'clearCart'])->name('cart.clear');
+    
+//});
 
 
 });

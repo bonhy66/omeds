@@ -38,9 +38,9 @@
                     </div>
                     <div class="product__item__text">
                         <h6>{{$product->name}}</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
+                        <a href="{{route('addtocart',$product->id)}}" class="add-cart">+ Add To Cart</a>
                         <h5>Price {{$product->price}}</h5>
-                        <h5>Quentity {{$product->quentity}}</h5>
+                        <h5>Quantity {{$product->quantity}}</h5>
                         <div class="product__color__select">
                             
                         </div>

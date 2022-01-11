@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('category_id');
             $table->string('company_id');
-            $table->string('quentity');
+            $table->string('quantity');
             $table->string('price');
             $table->timestamps();
         });

@@ -13,4 +13,7 @@ class FrontendController extends Controller
        $product = Product::find($id);
        return view('frontend.pages.single_product', compact('product'));
     }
+
+
+    
 }
