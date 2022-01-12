@@ -13,14 +13,17 @@ class CartController extends Controller
         if(array_key_exists($product->id,$cart))
         {
             $cart[$product->id]['quantity']++;
+            $cart[$product->id]['total_price'] =  (int)$cart[$product->id]['quantity'] * (int) $cart[$product->id]['price'];
         }
         else
         {
             $cart[$product->id] = [
+                'product_id'=>  $product->id,
                 'image'=>$product->image,
                 'name' =>$product->name,
                 'price' =>$product->price,
                 'quantity' => 1,
+                'total_price'=> (int)$product->price * 1
             ];
 
         }

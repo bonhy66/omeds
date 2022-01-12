@@ -32,10 +32,13 @@ class OrderController extends Controller
 
         Order::create([
             //field name from DB || field name from form 
-            'name'=>$request->name,
-            'image'=>$filename,
-            'category'=>$request->category,
-            'price'=>$request->price,
+            'receiver_name'=>$request->receiver_name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'address'=>$request->address,
+            'status'=>$request->status,
+            'total'=>$request->total,
+            'date'=>$request->date,
         
         ]);
         

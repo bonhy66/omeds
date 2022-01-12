@@ -68,7 +68,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-2" aria-controls="submenu-2">
-                            <i class="fa fa-fw fa-rocket"></i>Employees</a>
+                            <i class="fas fa-people-carry"></i>Employees</a>
                         <div id="submenu-2" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 
@@ -102,8 +102,7 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-4" aria-controls="submenu-4"><i
-                                class="fab fa-fw fa-wpforms"></i>Company</a>
+                            data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-building"></i>Company</a>
                         <div id="submenu-4" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -119,24 +118,27 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-5" aria-controls="submenu-5">Order
+                            data-target="#submenu-5" aria-controls="submenu-5"><i class="fab fa-first-order"></i>Order
                         </a>
                         <div id="submenu-5" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('admin.order.list')}}">Panding</a>
+                                    <a class="nav-link" href="#">Panding</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('admin.order.list')}}">Processing</a>
+                                    <a class="nav-link" href="#">Processing</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('admin.order.list')}}">Confirmed</a>
+                                    <a class="nav-link" href="#">Confirmed</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('admin.order.list')}}">Deliverd</a>
+                                    <a class="nav-link" href="#">Deliverd</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.order.list')}}">All Order</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('admin.order-details.list')}}">Order-details</a>
                                 </li>
                                
                             </ul>

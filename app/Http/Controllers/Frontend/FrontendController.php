@@ -14,6 +14,9 @@ class FrontendController extends Controller
        return view('frontend.pages.single_product', compact('product'));
     }
 
+  
+
+
 
     
 }

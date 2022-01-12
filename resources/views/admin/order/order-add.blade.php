@@ -6,32 +6,50 @@
     @csrf
 
     <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
- </div>
-
-
-  <div class="form-group">
-    <label for="exampleInputPassword2">Image</label>
-    <input name="image" type="file" class="form-control" id="exampleInputPassword2" placeholder="Image">
-  </div>
   
 
   <div class="form-group">
-    <label for="exampleInputPassword3">Category</label>
-    <input name ="category" type="text" class="form-control" id="exampleInputPassword3" placeholder="Category">
+    <label for="exampleInputPassword3">Receiver_Name</label>
+    <input name ="receiver_name" type="text" class="form-control" id="exampleInputPassword3" placeholder="Receiver_name">
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword4">Price</label>
-    <input name ="price" type="text" class="form-control" id="exampleInputPassword4" placeholder="Price">
+    <label for="exampleInputPassword4">Email</label>
+    <input name ="email" type="text" class="form-control" id="exampleInputPassword4" placeholder="Email">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputPassword4">Phone</label>
+    <input name ="phone" type="text" class="form-control" id="exampleInputPassword4" placeholder="Phone">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword4">Address</label>
+    <input name ="address" type="text" class="form-control" id="exampleInputPassword4" placeholder="Address">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword4">Status</label>
+    <input name ="status" type="text" class="form-control" id="exampleInputPassword4" placeholder="Status">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword4">Total</label>
+    <input name ="total" type="text" class="form-control" id="exampleInputPassword4" placeholder="Total">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputPassword4">Date</label>
+    <input name ="date" type="text" class="form-control" id="exampleInputPassword4" placeholder="Date">
   </div>
 
 
 
 
-  <button class="btn btn-primary" type="submit">Submit order</button>
+
+  
 </form>
 
 @endsection

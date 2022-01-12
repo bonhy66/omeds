@@ -8,12 +8,14 @@ use App\Http\Controllers\backend\CompanyController;
 use App\Http\Controllers\backend\EmployeeController;
 use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\backend\OrderController;
+use App\Http\Controllers\backend\OrderdetailsController;
 use App\Http\Controllers\backend\RequisitionController;
 // use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 use App\Http\Controllers\Frontend\UserController as FrontendUser;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Frontend\OrderController as Order;
 
 
 /*
@@ -48,17 +50,17 @@ Route::get('/logout',[FrontendUser::class,'userlogout'])->name('user.logout');
 
 Route::get('/registration',[FrontendUser::class,'registration'])->name('user.registration');
 Route::post('/registration',[FrontendUser::class,'doregistration'])->name('user.doRegistration');
+
 Route::get('/view/{id}',[FrontendController::class,'viewSingleProduct'])->name('user.singleProduct.view');
+Route::get('/checkout',[Order::class,'checkout'])->name('user.checkout');
+Route::post('/checkout-process',[Order::class,'orderPlace'])->name('order.place');
 
 Route::get('/add_to_cart/{id}',[CartController::class,'addtocart'])->name('addtocart');
 Route::get('/cartview',[CartController::class,'viewcart'])->name('viewcart');
 
-//Route::group(['middleware'=>'web_auth'],function (){
-//Route::get('/add-to-cart/{id}',[OrderController::class,'addToCart'])->name('cart.add');
-//Route::get('/get-cart',[OrderController::class,'getCart'])->name('cart.get');
-//Route::get('/clear-cart',[OrderController::class,'clearCart'])->name('cart.clear');
-    
-//});
+
+
+
 
 
 });
@@ -118,7 +120,8 @@ Route::get('/order/add',[OrderController::class,'form'])->name('admin.order.add'
 Route::post('/order/post',[OrderController::class,'postOrder'])->name('admin.order.post');
 Route::get('/order/delete/{id}',[OrderController::class,'deleteOrder'])->name('admin.order.delete');
 
-
+Route::get('/orderdetails/list',[OrderdetailsController::class,'list'])->name('admin.order-details.list');
+Route::get('/orderdetails/add',[OrderdetailsController::class,'form'])->name('admin.order-details.add');
 
 
 Route::get('/requisition/list',[RequisitionController::class,'form'])->name('admin.requisition.form');
