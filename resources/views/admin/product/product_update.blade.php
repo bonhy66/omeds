@@ -2,7 +2,8 @@
 
 @section('contents')
 
-<h3>Update Product</h3>
+<h4 style="text-align:center">Update Product</h4>
+
 <form action="{{route('admin.product.update',$product->id)}}" method="post">
     @csrf
     @method('put')

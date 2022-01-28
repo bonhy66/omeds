@@ -21,9 +21,8 @@
 
 
 <section class="hero">
-<!--
-    ======
--->
+
+
 
 @yield('contents')
 

@@ -46,10 +46,11 @@
     @yield('contents')
 
     </div>
-    @include('admin.fixed.footer')
+    
 
     </div>
     </div>
+    @include('admin.fixed.footer')
 </div>
 
 

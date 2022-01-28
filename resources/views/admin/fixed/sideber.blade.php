@@ -8,83 +8,38 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav flex-column">
-                   
+
+
+
+
                     <li class="nav-item ">
-                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-1" aria-controls="submenu-1"><i
-                                class="fa fa-dashboard"></i>Dashboard <span
-                                class="badge badge-success">6</span></a>
-                       <div id="submenu-1" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                              <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                                        data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
-                                    <div id="submenu-1-2" class="collapse submenu" style="">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="index.html">E Commerce Dashboard</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="ecommerce-product.html">Product List</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="ecommerce-product-single.html">Product
-                                                    Single</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="ecommerce-product-checkout.html">Product
-                                                    Checkout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="dashboard-finance.html">Finance</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="dashboard-sales.html">Sales</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                                        data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
-                                    <div id="submenu-1-1" class="collapse submenu" style="">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="influencer-profile.html">Influencer
-                                                    Profile</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="nav-link inactive" href="{{route('admin.index')}}" aria-expanded="false"
+                            data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-home"></i>Dashboard
+                        </a>
+
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-2" aria-controls="submenu-2">
                             <i class="fas fa-people-carry"></i>Employees</a>
                         <div id="submenu-2" class="collapse submenu" style="">
                             <ul class="nav flex-column">
-                                
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.employee.list')}}">Employee List</a>
                                 </li>
-                                 <li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.employee.form')}}">Employee add</a>
                                 </li>
-                               
+
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-3" aria-controls="submenu-3"><i class="fab fa-accusoft"></i>Products</a>
+                            data-target="#submenu-3" aria-controls="submenu-3"><i
+                                class="fab fa-accusoft"></i>Products</a>
                         <div id="submenu-3" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -93,25 +48,26 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.product.list')}}">Product list</a>
                                 </li>
-                               <li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.product.add')}}">Product Add</a>
                                 </li>
-                               
+
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-building"></i>Company</a>
+                            data-target="#submenu-4" aria-controls="submenu-4"><i
+                                class="fas fa-building"></i>Company</a>
                         <div id="submenu-4" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.company.list')}}">Company list</a>
                                 </li>
-                               <li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.company.entry')}}">Company add</a>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </li>
@@ -122,29 +78,38 @@
                         </a>
                         <div id="submenu-5" class="collapse submenu" style="">
                             <ul class="nav flex-column">
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Panding</a>
+                                    <a class="nav-link" href="{{route('admin.order.list')}}" >All Order</a>
+                                    
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Processing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Confirmed</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Deliverd</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('admin.order.list')}}">All Order</a>
-                                </li>
+
+                                
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('order.pending')}}">Pending</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Processing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('order.delivered')}}">Delivered</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('order.cancelled')}}">Cancelled</a>
+                                    </li>
+                                    
+
+                                
+
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.order-details.list')}}">Order-details</a>
                                 </li>
-                               
+
                             </ul>
                         </div>
-                    </li> 
-                    
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-6" aria-controls="submenu-6">
@@ -153,7 +118,7 @@
 
                         <div id="submenu-6" class="collapse submenu" style="">
                             <ul class="nav flex-column">
-                               <li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link" href="pages/general-table.html">Paid</a>
                                 </li>
                                 <li class="nav-item">
@@ -166,7 +131,7 @@
                         </div>
                     </li>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-7" aria-controls="submenu-7"><i
                                 class="fas fa-fw fa-table"></i>Requisition</a>
@@ -180,8 +145,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                  
+                    </li> -->
+
                 </ul>
             </div>
         </nav>

@@ -2,8 +2,11 @@
 
 @section('contents')
 
+<h2 style="text-align:center">List of Employees</h2>
 <a href="{{route('admin.employee.form')}}" class="btn btn-primary">Add Employee</a>
-<caption>List of Emplpyees</caption>
+
+
+
 <table class="table">
   
   <thead>

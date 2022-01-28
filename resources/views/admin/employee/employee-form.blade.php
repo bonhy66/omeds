@@ -20,7 +20,7 @@
     <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputAddress1">Birth_Date</label>
-      <input name="birth_date" type="text" class="form-control" id="inputAddress1" placeholder="Birth_date">
+      <input name="birth_date" type="date" class="form-control" id="inputAddress1" placeholder="Birth_date">
     </div>
 
     <div class="form-row">
@@ -43,7 +43,7 @@
 
   <div class="form-group">
     <label for="inputAddress5">Joining_date</label>
-    <input name="joining_date" type="text" class="form-control" id="inputAddress5" placeholder="joining_date">
+    <input name="joining_date" type="date" class="form-control" id="inputAddress5" placeholder="joining_date">
   </div>
   <div class="form-group">
     <label for="inputAddress6">Department</label>

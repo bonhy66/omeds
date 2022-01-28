@@ -57,13 +57,13 @@ $total=0;
             <p>Total={{$total}}</p>
         </div>
 
-        
+
 
     </div>
-       
-        <div class="col-md-4"><a href="{{route('user.checkout')}}" class="btn btn-primary"
-                style="background-color: green; color: white;margin-left: 1000px;">Check out</a>
-        </div>
+
+    <div class="col-md-4"><a href="{{route('user.checkout')}}" class="btn btn-primary"
+            style="background-color: green; color: white;margin-left: 1000px;">Check out</a>
+    </div>
 
 
 

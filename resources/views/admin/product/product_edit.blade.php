@@ -1,8 +1,8 @@
 @extends('admin.master')
 
 @section('contents')
+<h4 style="text-align:center">Edit product</h4>
 
-<h1>Edit product</h1>
 
 @if(session()->has('success'))
     <p class="alert alert-success">

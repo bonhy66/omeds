@@ -2,7 +2,8 @@
 @section('contents')
 <input style="float: right !important;" class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');"
     value="Print">
-<h1>Product Details</h1>
+    <h2 style="text-align:center">Product Details</h2>
+
 <div id="divToPrint">
     <form>
         <div class="form-group">

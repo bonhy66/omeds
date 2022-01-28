@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
@@ -13,7 +16,8 @@ class OrderController extends Controller
 {
     public function checkout()
     {
-       return view('frontend.pages.checkout');
+      
+        return view('frontend.pages.checkout',);
     }
 
 
@@ -21,6 +25,7 @@ class OrderController extends Controller
     public function orderPlace(Request $request)
     {
         $carts = session('cart');
+        //dd($carts);
   
         $total = array_sum(array_column($carts,'total_price'));
 

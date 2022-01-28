@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Orderdetail extends Model
 {
     use HasFactory;
-    protected $table = 'order-details';
+    
     protected $guarded=[];
+
+     public function productRelation()
+    {
+     return $this->belongsTo(Product::class,'product_id','id');
+    }
+    
+    
+
 }

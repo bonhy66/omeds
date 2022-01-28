@@ -35,7 +35,7 @@
 <div class="card">
 <div class="card-body">
 <div class="d-inline-block">
-<h5 class="text-muted">Total Views</h5>
+<h5 class="text-muted">Total Product</h5>
 <h2 class="mb-0">00</h2>
 </div>
 <div class="float-right icon-circle-medium  icon-box-lg  bg-info-light mt-1">
@@ -54,7 +54,7 @@
 <div class="card">
 <div class="card-body">
 <div class="d-inline-block">
-<h5 class="text-muted">Total Followers</h5>
+<h5 class="text-muted">Total Users</h5>
 <h2 class="mb-0">00</h2>
 </div>
 <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
@@ -73,7 +73,7 @@
 <div class="card">
 <div class="card-body">
 <div class="d-inline-block">
-<h5 class="text-muted">Partnerships</h5>
+<h5 class="text-muted">Total Customers</h5>
 <h2 class="mb-0">00</h2>
 </div>
 <div class="float-right icon-circle-medium  icon-box-lg  bg-secondary-light mt-1">
@@ -93,7 +93,7 @@
 <div class="card-body">
 <div class="d-inline-block">
 <h5 class="text-muted">Total Earned</h5>
-<h2 class="mb-0"> $149.00</h2>
+<h2 class="mb-0">00</h2>
 </div>
 <div class="float-right icon-circle-medium  icon-box-lg  bg-brand-light mt-1">
 <i class="fa fa-money-bill-alt fa-fw fa-sm text-brand"></i>

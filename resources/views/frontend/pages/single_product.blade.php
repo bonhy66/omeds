@@ -11,15 +11,15 @@
                         <ul  class="product__hover" style="position: static">
                             
                             <li><a href="{{route('user.singleProduct.view',$product->id)}}">
-                                <img src="{{url('/uploads/product/'.$product->image)}}" alt="">
+                                <img src="{{url('/uploads/product/'.$product->image)}}" style="height: 250px;"alt="">
                                     <span>Compare</span></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h5>{{$product->name}}</h5>
+                        <h5 style="text-align:center">{{$product->name}}</h5>
                        
-                        <h5>Price {{$product->price}}</h5>
-                        <h5>Quantity {{$product->quantity}}</h5>
+                        <h5 style="text-align:center">Price {{$product->price}}</h5>
+                        
                         
                     </div>
                 </div>

@@ -45,6 +45,8 @@ class OrderController extends Controller
         return redirect()->route('admin.order.list');
     }
 
+    
+
     public function deleteOrder($id){
         $order = Order::find($id);
  
@@ -55,8 +57,38 @@ class OrderController extends Controller
         }
     }
 
+    public function orderUpdate(Request $request,$id)
+    {
+        $order = Order::find($id);
+        $order->update([
+            'status'=>$request->status,
+        ]);
+        return redirect()->back()->with('message','Order Status Updated');
+    }
 
-   
+    public function orderPending()
+    {
+        $pending = Order::where('status','pending')->get();
+        // dd($pending);
+        return view('admin.order.order-pending',compact('pending'));
+        
+    }
+
+    public function orderDelivered()
+    {
+        $delivered = Order::where('status','delivered')->get();
+        // dd($delivered);
+        return view('admin.order.order-delivered',compact('delivered'));
+        
+    }
+    
+    public function orderCancelled()
+    {
+        $cancelled = Order::where('status','cancelled')->get();
+        // dd($cancelled);
+        return view('admin.order.order-cancelled',compact('cancelled'));
+        
+    }
 
 
 }

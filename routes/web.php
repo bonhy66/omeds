@@ -52,6 +52,7 @@ Route::get('/registration',[FrontendUser::class,'registration'])->name('user.reg
 Route::post('/registration',[FrontendUser::class,'doregistration'])->name('user.doRegistration');
 
 Route::get('/view/{id}',[FrontendController::class,'viewSingleProduct'])->name('user.singleProduct.view');
+
 Route::get('/checkout',[Order::class,'checkout'])->name('user.checkout');
 Route::post('/checkout-process',[Order::class,'orderPlace'])->name('order.place');
 
@@ -71,7 +72,7 @@ Route::get('/cartview',[CartController::class,'viewcart'])->name('viewcart');
 
 
 
-Route::get('admin/login',[UserController::class,'login'])->name('admin.login');
+Route::get('/',[UserController::class,'login'])->name('admin.login');
 Route::post('/login',[UserController::class,'doLogin'])->name('admin.doLogin');
 
 
@@ -84,7 +85,7 @@ Route::get('/', function () {
 Route::get('/logout',[UserController::class,'Adminlogout'])->name('admin.logout');
 
 Route::get('/master',[AdminController::class,'master'])->name('master');
-Route::get('/index',[AdminController::class,'index'])->name('admin.index');
+Route::get('admin/index',[AdminController::class,'index'])->name('admin.index');
 
 Route::get('/category/list',[CategoryController::class,'list'])->name('admin.category.list');
 Route::get('/category/create',[CategoryController::class,'form'])->name('admin.category.form');
@@ -119,10 +120,15 @@ Route::get('/order/list',[OrderController::class,'list'])->name('admin.order.lis
 Route::get('/order/add',[OrderController::class,'form'])->name('admin.order.add');
 Route::post('/order/post',[OrderController::class,'postOrder'])->name('admin.order.post');
 Route::get('/order/delete/{id}',[OrderController::class,'deleteOrder'])->name('admin.order.delete');
+Route::post('/order/update/{id}',[OrderController::class,'orderUpdate'])->name('order.update');
+Route::get('/order/pending',[OrderController::class,'orderPending'])->name('order.pending');
+Route::get('/order/delivered',[OrderController::class,'orderDelivered'])->name('order.delivered');
+Route::get('/order/cancelled',[OrderController::class,'orderCancelled'])->name('order.cancelled');
+// Route::get('/order/processed',[OrderController::class,'orderProcessed'])->name('order.processed');
 
 Route::get('/orderdetails/list',[OrderdetailsController::class,'list'])->name('admin.order-details.list');
 Route::get('/orderdetails/add',[OrderdetailsController::class,'form'])->name('admin.order-details.add');
-
+Route::get('/orderdetails/view/{id}',[OrderdetailsController::class,'orderview'])->name('admin.order-details.view');
 
 Route::get('/requisition/list',[RequisitionController::class,'form'])->name('admin.requisition.form');
 
