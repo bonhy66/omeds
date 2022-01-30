@@ -17,8 +17,8 @@
         </tr>
     </thead>
     <tbody>
-        @if($cancelled->count()>0)
-        @foreach($cancelled as $key=>$data)
+        @if($processed->count()>0)
+        @foreach($processed as $key=>$data)
         <tr>
             <td scope="row">{{$key+1}}</td>
             <td>{{$data->receiver_name}}</td>

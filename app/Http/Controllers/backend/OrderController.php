@@ -82,11 +82,11 @@ class OrderController extends Controller
         
     }
     
-    public function orderCancelled()
+    public function orderProcessed()
     {
-        $cancelled = Order::where('status','cancelled')->get();
+        $processed = Order::where('status','processed')->get();
         // dd($cancelled);
-        return view('admin.order.order-cancelled',compact('cancelled'));
+        return view('admin.order.order-processed',compact('processed'));
         
     }
 

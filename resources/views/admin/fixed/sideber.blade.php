@@ -81,25 +81,19 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('admin.order.list')}}" >All Order</a>
-                                    
+
                                 </li>
 
-                                
+
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('order.pending')}}">Pending</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Processing</a>
+                                        <a class="nav-link" href="{{route('order.processed')}}">Processed</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{route('order.delivered')}}">Delivered</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{route('order.cancelled')}}">Cancelled</a>
-                                    </li>
-                                    
-
-                                
 
 
                                 <li class="nav-item">
@@ -110,7 +104,7 @@
                         </div>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                             data-target="#submenu-6" aria-controls="submenu-6">
 
@@ -129,23 +123,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> --}}
 
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-7" aria-controls="submenu-7"><i
-                                class="fas fa-fw fa-table"></i>Requisition</a>
-                        <div id="submenu-7" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/general-table.html">General Tables</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/data-tables.html">Data Tables</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li> -->
+
 
                 </ul>
             </div>

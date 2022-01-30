@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="{{url('backend/css/fontawesome-all.css')}}">
     <link rel="stylesheet" href="{{url('backend/css/morris.css')}}">
     <link rel="stylesheet" href="{{url('backend/css/materialdesignicons.min.css')}}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <title>Online Medical Equipments</title>
     <meta name="robots" content="noindex, nofollow">
 </head>
@@ -21,7 +23,7 @@
 
 
 
-<div class="dashboard-main-wrapper">
+    <div class="dashboard-main-wrapper">
 
 
 
@@ -30,32 +32,32 @@
 
 
         <!-- header -->
-     
-
-    @include('admin.fixed.sideber')
-    <div class="dashboard-wrapper">
 
 
-    <!-- sideber -->
+        @include('admin.fixed.sideber')
+        <div class="dashboard-wrapper">
+
+
+            <!-- sideber -->
+
+
+            <div class="dashboard-influence">
+                <div class="container-fluid dashboard-content">
+
+
+                    @yield('contents')
+
+                </div>
+
+
+            </div>
+        </div>
+        @include('admin.fixed.footer')
+    </div>
 
     
-    <div class="dashboard-influence">
-    <div class="container-fluid dashboard-content">
 
 
-    @yield('contents')
-
-    </div>
-    
-
-    </div>
-    </div>
-    @include('admin.fixed.footer')
-</div>
-
-
-
-    
     <script src="{{url('backend/js/jquery-3.3.1.min.js')}}"></script>
 
     <script src="{{url('backend/js/bootstrap.bundle.js')}}"></script>

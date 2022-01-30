@@ -40,7 +40,7 @@ use App\Http\Controllers\Frontend\OrderController as Order;
 //frontend
 // Route::get('/frontend/master',[FrontendUser::class,'frontMaster'])->name('frontend.master');
 
-Route::group(['prefix'=>'frontend'],function(){ 
+Route::group(['prefix'=>'frontend'],function(){
 
 Route::get('/index',[FrontendUser::class,'index'])->name('frontend.index');
 
@@ -76,7 +76,7 @@ Route::get('/',[UserController::class,'login'])->name('admin.login');
 Route::post('/login',[UserController::class,'doLogin'])->name('admin.doLogin');
 
 
-Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){ 
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
 
 Route::get('/', function () {
     return view('welcome');
@@ -92,7 +92,7 @@ Route::get('/category/create',[CategoryController::class,'form'])->name('admin.c
 Route::post('/category/post',[CategoryController::class,'postCategory'])->name('admin.category.post');
 Route::get('/category/delete/{id}',[CategoryController::class,'deleteCategory'])->name('admin.category.delete');
 
-//Product 
+//Product
 
 Route::get('/product/list',[ProductController::class,'list'])->name('admin.product.list');
 Route::get('/product/add',[ProductController::class,'form'])->name('admin.product.add');
@@ -123,14 +123,13 @@ Route::get('/order/delete/{id}',[OrderController::class,'deleteOrder'])->name('a
 Route::post('/order/update/{id}',[OrderController::class,'orderUpdate'])->name('order.update');
 Route::get('/order/pending',[OrderController::class,'orderPending'])->name('order.pending');
 Route::get('/order/delivered',[OrderController::class,'orderDelivered'])->name('order.delivered');
-Route::get('/order/cancelled',[OrderController::class,'orderCancelled'])->name('order.cancelled');
-// Route::get('/order/processed',[OrderController::class,'orderProcessed'])->name('order.processed');
+Route::get('/order/processed',[OrderController::class,'orderProcessed'])->name('order.processed');
+
 
 Route::get('/orderdetails/list',[OrderdetailsController::class,'list'])->name('admin.order-details.list');
 Route::get('/orderdetails/add',[OrderdetailsController::class,'form'])->name('admin.order-details.add');
 Route::get('/orderdetails/view/{id}',[OrderdetailsController::class,'orderview'])->name('admin.order-details.view');
 
-Route::get('/requisition/list',[RequisitionController::class,'form'])->name('admin.requisition.form');
 
 });
 

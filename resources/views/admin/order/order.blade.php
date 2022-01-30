@@ -39,7 +39,6 @@
                     <select class="form-control" name="status" style="width: 136px;">
 
                         <option value="processed">Processed</option>
-                        <option value="cancelled">Cancelled</option>
                         <option value="delivered">Delivered</option>
 
                     </select>
