@@ -11,7 +11,7 @@ class Orderdetail extends Model
 
     protected $guarded=[];
 
-     public function productRelation()
+     public function product()
     {
      return $this->belongsTo(Product::class,'product_id','id');
     }
